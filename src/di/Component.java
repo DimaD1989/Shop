@@ -1,15 +1,15 @@
 package di;
 
+import controllers.ShopController;
 import model.domain.Repository;
-import model.domain.ShopControllers;
 import model.domain.Storage;
+import views.View;
 
-import javax.swing.text.View;
 
 public class Component {
     public Storage storage;
     public Repository repository;
-    public ShopControllers noteController;
+    public ShopController noteController;
     public View shopView;
 
     public Component() {
@@ -17,7 +17,7 @@ public class Component {
         storage = Module.provideStorage();
         repository = Module.provideRepository(storage, Module.provideMapper());
         noteController = Module.provideNoteController(repository, Module.provideValidator());
-        shopView = Module.provideView(
+        shopView = (View) Module.provideView(
                 noteController,
                 Module.providePromptable(
                         Module.provideLogger()

@@ -1,9 +1,14 @@
 package di;
 
 import controllers.ShopController;
+import model.data.FileStorage;
+import model.data.RepositoryImpl;
 import model.domain.*;
+import views.*;
 
-public class Model {
+
+public class Module {
+
     public static Storage provideStorage() {
         return new FileStorage("toys.txt");
     }
@@ -23,7 +28,7 @@ public class Model {
         return new RepositoryImpl(mapper, storage);
     }
 
-    public static ShopControllers provideNoteController(
+    public static ShopController provideNoteController(
             Repository repository,
             Validator validator
     ) {
@@ -43,19 +48,19 @@ public class Model {
         );
     }
 
-    public static ToysAdapter provideToysAdapter() {
+    public static IToysAdapter provideToysAdapter() {
         return new ToysAdapterImpl();
     }
 
-    public static IToysFactory provideNotesFactory() {
-        return new ToysFactory();
+    public static IToyFactory provideNotesFactory() {
+        return new ToyFactory();
     }
 
     public static View provideView(
             ShopController controller,
             Promptable promptable,
-            ToysAdapter notesAdapter,
-            IToysFactory notesFactory
+            IToysAdapter notesAdapter,
+            IToyFactory notesFactory
     ) {
         return new ShopView(controller, promptable, notesAdapter, notesFactory);
     }

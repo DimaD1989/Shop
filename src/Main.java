@@ -1,5 +1,11 @@
+import di.Component;
+
 public class Main {
+
+    private static final Component appComponent = new Component();
+
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+
+        appComponent.shopView.run();
     }
 }
