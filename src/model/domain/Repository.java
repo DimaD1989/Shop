@@ -1,5 +1,8 @@
 package model.domain;
 
+import model.domain.entity.Toy;
+import java.util.List;
+
 public interface Repository {
     List<Toy> getAllToys();
 

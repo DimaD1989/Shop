@@ -1,8 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7d45d60c-16e9-4718-8c4b-79ebe01e61b5" name="Changes" comment="start main">
+    <list default="true" id="7d45d60c-16e9-4718-8c4b-79ebe01e61b5" name="Changes" comment="start logger">
+      <change afterPath="$PROJECT_DIR$/src/model/domain/IToyFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/domain/LoggerImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/domain/Storage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/domain/ToyFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/model/domain/Validator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/domain/Repository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/domain/Repository.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -12,8 +18,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -58,7 +64,21 @@
       <option name="project" value="LOCAL" />
       <updated>1678087796384</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="start Repository">
+      <created>1678088147275</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1678088147275</updated>
+    </task>
+    <task id="LOCAL-00004" summary="start logger">
+      <created>1678088361854</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1678088361854</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -75,6 +95,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="start" />
     <MESSAGE value="start main" />
-    <option name="LAST_COMMIT_MESSAGE" value="start main" />
+    <MESSAGE value="start Repository" />
+    <MESSAGE value="start logger" />
+    <option name="LAST_COMMIT_MESSAGE" value="start logger" />
   </component>
 </project>
