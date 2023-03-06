@@ -1,38 +1,41 @@
 package di;
 
+import controllers.ShopController;
+import model.domain.*;
+
 public class Model {
-    public static IStorage provideStorage() {
+    public static Storage provideStorage() {
         return new FileStorage("toys.txt");
     }
 
-    public static IMapper provideMapper() {
-        return new MapperIml();
+    public static Mapper provideMapper() {
+        return new MapperImpl();
     }
 
-    public static IValidator provideValidator() {
-        return new MapperIml();
+    public static Validator provideValidator() {
+        return new MapperImpl();
     }
 
-    public static IRepository provideRepository(
-            IStorage storage,
-            IMapper mapper
+    public static Repository provideRepository(
+            Storage storage,
+            Mapper mapper
     ) {
         return new RepositoryImpl(mapper, storage);
     }
 
-    public static IShopController provideNoteController(
-            IRepository repository,
-            IValidator validator
+    public static ShopControllers provideNoteController(
+            Repository repository,
+            Validator validator
     ) {
         return new ShopController(repository, validator);
     }
 
-    public static ILogger provideLogger() {
+    public static Logger provideLogger() {
         return new LoggerImpl("log.txt");
     }
 
     public static Promptable providePromptable(
-            ILogger logger
+            Logger logger
     ) {
         return new PromptableLoggingDecorator(
                 new PromptableImpl(),
@@ -40,7 +43,7 @@ public class Model {
         );
     }
 
-    public static IToysAdapter provideToysAdapter() {
+    public static ToysAdapter provideToysAdapter() {
         return new ToysAdapterImpl();
     }
 
@@ -48,10 +51,10 @@ public class Model {
         return new ToysFactory();
     }
 
-    public static IView provideView(
-            IShopController controller,
+    public static View provideView(
+            ShopController controller,
             Promptable promptable,
-            IToysAdapter notesAdapter,
+            ToysAdapter notesAdapter,
             IToysFactory notesFactory
     ) {
         return new ShopView(controller, promptable, notesAdapter, notesFactory);
