@@ -29,7 +29,6 @@ public class RepositoryImpl implements Repository {
 
     @Override
     public int createToy(Toy toy) {
-
         List<Toy> toys = getAllToys();
         int max = 0;
         for (Toy item : toys) {
